@@ -1,12 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
+
 const CustomButton = (props) => {
-    const {text, variant} = props
+    const {text, variant, buttonClicked, color} = props
 
     return (
-        <Button variant={variant}>{text}</Button>
+        <Button color={color} onClick={(e) => buttonClicked(e)} variant={variant}>{text}</Button>
     )
 }
 
