@@ -1,6 +1,6 @@
 import React from 'react'
 import CustomButton from "../common/CustomButton.js"
-import { styled } from '@material-ui/core/styles';
+import styled from 'styled-components';
 
 const CustomDiv = styled.div`
 margin: 100px;
