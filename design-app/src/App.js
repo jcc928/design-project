@@ -10,10 +10,12 @@ const theme = createMuiTheme({
 			background: "#FFFFFF",
 			content: "#222222"
 		},
-		secondary: "#000",
-		content: "#5C5C5C",
-		disabled_fields: "#ABABAB",
-		background: "#FAFAFA"
+		secondary: {
+			main: "#800000",
+			content: "#5C5C5C",
+			disabled_fields: "#ABABAB",
+			background: "#FAFAFA"
+		}
 	}
 });
 

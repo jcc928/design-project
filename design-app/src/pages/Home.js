@@ -31,7 +31,7 @@ const Home = () => {
 				<CustomButton
 					color={background}
 					buttonClicked={(e) => buttonClicked(e)}
-					variant="outlined"
+					variant="contained"
 					text="Default"
 				/>
 			</CustomDiv>
