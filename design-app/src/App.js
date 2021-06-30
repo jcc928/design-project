@@ -1,39 +1,19 @@
 import React from "react";
-import Home from "./pages/Home.js";
+import { Route, Switch } from "react-router-dom";
 
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
-
-const theme = createMuiTheme({
-	palette: {
-		primary: {
-			main: "#6C4193",
-			background: "#FFFFFF",
-			content: "#222222"
-		},
-		secondary: {
-			main: "#000",
-			content: "#5C5C5C",
-			disabled_fields: "#ABABAB",
-			background: "#FAFAFA"
-		},
-		others: {
-			error: "#FB4E4E",
-			pending: "#FDBC3F",
-			success: "#2AC769",
-			hover: "#58327A",
-			focused: "#4F0C8C",
-			disabled: "#E0E0E0"
-		}
-	}
-});
-
+import Home from "./pages/Home";
+import Project1 from "./pages/Project1";
 const App = () => {
 	return (
-		<ThemeProvider theme={theme}>
-			<div>
-				<Home />
-			</div>
-		</ThemeProvider>
+		<Switch>
+			<Route exact from="/" render={(props) => <Home {...props} />} />
+			<Route
+				exact
+				from="/project1"
+				render={(props) => <Project1 {...props} />}
+			/>
+		</Switch>
 	);
 };
+
 export default App;
