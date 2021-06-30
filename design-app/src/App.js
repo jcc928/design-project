@@ -11,10 +11,18 @@ const theme = createMuiTheme({
 			content: "#222222"
 		},
 		secondary: {
-			main: "#800000",
+			main: "#000",
 			content: "#5C5C5C",
 			disabled_fields: "#ABABAB",
 			background: "#FAFAFA"
+		},
+		others: {
+			error: "#FB4E4E",
+			pending: "#FDBC3F",
+			success: "#2AC769",
+			hover: "#58327A",
+			focused: "#4F0C8C",
+			disabled: "#E0E0E0"
 		}
 	}
 });
