@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import CustomButton from "../commons/CustomButton";
 import { Button } from "@material-ui/core";
 
+// Icon imports
+import MailIcon from "@material-ui/icons/Mail";
 //Custom styling import
 import styled from "styled-components";
 
@@ -25,7 +27,7 @@ const Home = () => {
 				color="primary"
 				onClick={(e) => buttonClicked(e)}
 			>
-				Press me
+				<MailIcon />
 			</Button>
 			<CustomDiv>
 				<CustomButton
