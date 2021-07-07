@@ -2,42 +2,32 @@
 import React, { useState } from "react";
 //Custom components
 import CustomButton from "../commons/CustomButton";
-import { Button } from "@material-ui/core";
+import { Button, Grid, Paper, Typography } from "@material-ui/core";
 
 // Icon imports
-import MailIcon from "@material-ui/icons/Mail";
 //Custom styling import
 import styled from "styled-components";
 
-const CustomDiv = styled.div`
-	margin: 100px;
+const HomeContainer = styled(Paper)`
+	height: 100vh;
+	width: 100%;
 `;
 
 const Home = () => {
-	const [background, setBackground] = useState("white");
-	const buttonClicked = (e) => {
-		setBackground("secondary");
-		console.log(background);
-	};
 	return (
-		<div>
-			<h1>Home</h1>
-			<Button
-				variant="contained"
-				color="primary"
-				onClick={(e) => buttonClicked(e)}
-			>
-				<MailIcon />
-			</Button>
-			<CustomDiv>
-				<CustomButton
-					color={background}
-					buttonClicked={(e) => buttonClicked(e)}
-					variant="contained"
-					text="Default"
-				/>
-			</CustomDiv>
-		</div>
+		<>
+			<HomeContainer>
+				<Grid container direction="column">
+					<Typography variant="h1">Home</Typography>
+					<Button variant="contained" color="primary">
+						This is a button
+					</Button>
+					<Button variant="contained" color="secondary">
+						This is another button
+					</Button>
+				</Grid>
+			</HomeContainer>
+		</>
 	);
 };
 export default Home;

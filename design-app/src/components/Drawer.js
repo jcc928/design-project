@@ -7,7 +7,8 @@ import {
 	List,
 	ListItem,
 	ListItemIcon,
-	ListItemText
+	ListItemText,
+	Switch
 } from "@material-ui/core";
 
 // Material UI Icon imports
@@ -19,10 +20,10 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import styled from "styled-components";
 
 const StyledDrawer = styled(MUIDrawer)`
-	width: 200px;
+	width: 150px;
 `;
 const Drawer = (props) => {
-	const { history } = props;
+	const { history, darkMode, darkModeToggle } = props;
 	const itemsList = [
 		{
 			text: "Home",
@@ -43,6 +44,7 @@ const Drawer = (props) => {
 	return (
 		<StyledDrawer variant="permanent">
 			<List>
+				<Switch checked={darkMode} onChange={darkModeToggle} />
 				{itemsList.map((item, index) => {
 					const { text, icon, onClick } = item;
 					return (
